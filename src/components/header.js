@@ -1,12 +1,13 @@
+/* eslint-disable react/prefer-stateless-function */
 import { Component } from 'react';
 
 class Header extends Component {
   render() {
     return (
-        <div className="header"> 
-        <h2>Todo List</h2>
+        <div className="header">
+          <h2>Todo List</h2>
         </div>
-        );
+    );
   }
 }
 

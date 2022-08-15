@@ -16,22 +16,23 @@ const App = () => {
 
   return (
     <div className="container">
-    <div className="wrapper">
-    <div className="header">
-    <Header />
+      <div className="wrapper">
+      <div className="header">
+      <Header />
     </div>
-    <div>
-     <AddTask input={input}
-      setInput={setInput}
-      todos={todos}
-      setTodos={setTodos}
-      editTodo={editTodo}
-      setEditTodo={setEditTodo}
+      <div>
+      <AddTask 
+       input={input}
+       setInput={setInput}
+       todos={todos}
+       setTodos={setTodos}
+       editTodo={editTodo}
+       setEditTodo={setEditTodo}
       />
     </div>
-    <div>
-      <List todos={todos} setTodos={setTodos} setEditTodo={setEditTodo} />
-    </div>
+      <div>
+        <List todos={todos} setTodos={setTodos} setEditTodo={setEditTodo} />
+      </div>
     </div>
     </div>
   );

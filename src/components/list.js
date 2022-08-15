@@ -1,6 +1,5 @@
-
 const list = ({ todos, setTodos, setEditTodo }) => {
-  const handleEdit = ({id}) => { 
+  const handleEdit = ({ id }) => {
     const findTodo = todos.find((task) => task.id === id);
     setEditTodo(findTodo);
   };
@@ -8,7 +7,7 @@ const list = ({ todos, setTodos, setEditTodo }) => {
   const handleComplete = (todo) => {
     setTodos(todos.map((task) => {
       if (task.id === todo.id) {
-        return {...task, completed: !task.completed};
+        return { ...task, completed: !task.completed };
       }
       return task;
     }));
@@ -19,14 +18,16 @@ const list = ({ todos, setTodos, setEditTodo }) => {
   };
 
   return (
-        <div className="list-container">
-         {
+    <div className="list-container">
+          {
             todos.map((todo) => (
-             <li className="newTask" key={todo.id}>
-                <input type="text" value={todo.description} 
-                className={`list ${todo.completed ? 'complete':''}`} 
-                onChange={(e) => e.preventDefault()} />
-                <div>
+              <li className="newTask" key={todo.id}>
+               <input type="text" 
+                  value={todo.description}
+                  className={`list ${todo.completed ? 'complete' :''}`} 
+                  onChange={(e) => e.preventDefault()} 
+                />
+                  <div>
             <button className="complete-icon" onClick={() => handleComplete(todo)}>
                <i className="fa fa-check-circle"></i>
             </button>
