@@ -1,19 +1,18 @@
-/* eslint-disable react/prefer-stateless-function */
 import React, { useState, useEffect } from 'react';
-import './index.css'
+import './index.css';
 import Header from './components/header';
 import AddTask from './components/form';
 import List from './components/list';
 
 const App = () => {
-  const allTask = JSON.parse(localStorage.getItem("todos")) || [];
-  const [input, setInput] = useState("");
+  const allTask = JSON.parse(localStorage.getItem('todos')) || [];
+  const [input, setInput] = useState('');
   const [todos, setTodos] = useState(allTask);
-  const [editTodo, setEditTodo] = useState("null");
+  const [editTodo, setEditTodo] = useState('null');
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-  }, [todos])
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="container">
@@ -36,7 +35,6 @@ const App = () => {
     </div>
     </div>
   );
-
-}
+};
 
 export default App;
