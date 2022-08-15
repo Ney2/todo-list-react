@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const AddTask = ({
-     input, setInput, todos, setTodos, editTodo, setEditTodo
-     }) => {
-  const updateTodo = (description, id , completed) => {
+  input, setInput, todos, setTodos, editTodo, setEditTodo,
+}) => {
+  const updateTodo = (description, id, completed) => {
     const newTask = todos.map((task) => 
       task.id === id ? { description, id, completed } : task
     );

@@ -1,4 +1,3 @@
-import React from "react";
 
 const list = ({ todos, setTodos, setEditTodo }) => {
   const handleEdit = ({id}) => { 
