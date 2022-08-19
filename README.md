@@ -5,6 +5,10 @@ It has a functionality of adding a task, editing a task and deleting a task.
 # Built With
 - React
 - JSX
+
+# Live Link Demo
+ - [ToDo List](https://wondrous-meringue-94bb2b.netlify.app/)
+ 
 # Getting Started
 
 To get a local copy up and running follow these simple example steps.
